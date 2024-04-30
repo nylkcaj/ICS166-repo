@@ -13,6 +13,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     private RectTransform rectTransform;
     private Transform itemTransform;
     private GameObject currentItem;
+    private Collider2D foodCollider;
 
     private void Awake()
     {
@@ -36,6 +37,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("OnEndDrag");
+
+        foodCollider.enabled = true;
+
+        Debug.Log("Collider.enabled = " + foodCollider.enabled);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -45,8 +50,16 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         Vector3 mousePos = Input.mousePosition;
         Vector3 itemPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
 
-        itemTransform = Instantiate(foodItem, itemPosition, Quaternion.identity).GetComponent<Transform>();
 
+        currentItem = Instantiate(foodItem, itemPosition, Quaternion.identity);
+
+        itemTransform = currentItem.GetComponent<Transform>();
+
+        foodCollider = currentItem.GetComponent<Collider2D>();
+
+        foodCollider.enabled = false;
+
+        Debug.Log("Collider.enabled = " + foodCollider.enabled);
     }
 
 }
