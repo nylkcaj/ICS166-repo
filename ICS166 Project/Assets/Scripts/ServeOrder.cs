@@ -32,6 +32,7 @@ public class ServeOrder : MonoBehaviour
         if (GameFlow.orderValue == GameFlow.plateValue)
         {
             Debug.Log("correct order");
+            GameFlow.plateValue = 0;
         }
         else
         {
@@ -51,6 +52,7 @@ public class ServeOrder : MonoBehaviour
         {
             DoughSpawner.isServed.Invoke();
             Destroy(gameObject);
+
         }
         else
         {
