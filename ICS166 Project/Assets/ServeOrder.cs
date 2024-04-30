@@ -7,6 +7,13 @@ public class ServeOrder : MonoBehaviour
 {
     private bool dragging = false;
     private Vector3 offset;
+    private Vector3 originalPos;
+
+
+    private void Awake()
+    {
+        originalPos = transform.position;
+    }
 
     void Update()
     {
@@ -25,5 +32,22 @@ public class ServeOrder : MonoBehaviour
     private void OnMouseUp()
     {
         dragging = false;
+        transform.position = originalPos;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Customer")
+        {
+            DoughSpawner.isServed.Invoke();
+            Destroy(gameObject);
+        }
+        else
+        {
+            transform.position = originalPos;
+        }
+
+    }
+
+    
 }
