@@ -20,5 +20,6 @@ public class DoughSpawner : MonoBehaviour
     public void OrderServed()
     {
         Instantiate(newDough);
+        GameFlow.plateValue = 0;
     }
 }
