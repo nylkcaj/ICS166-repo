@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 8584690447600095764, guid: 3fec1d6c43fe3c84c9fc9d94fb5552f2, type: 3}
+  foodValue: 100000
 --- !u!114 &302579701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 4303496285128286406, guid: 0d23ab44e3fe69e4aac8baf7ba509ca8, type: 3}
+  foodValue: 1000
 --- !u!114 &356529439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 7789438512949307035, guid: 98fddf7d0cf86a744804eeaa1ac97b81, type: 3}
+  foodValue: 10
 --- !u!114 &474100558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 5588547783715314958, guid: 166f0bdc21383934cabe601a32027640, type: 3}
+  foodValue: 10000
 --- !u!114 &526208828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 1914987855355062335, guid: c4471375517a16c4c92c9866858ca839, type: 3}
+  foodValue: 10000000
 --- !u!114 &754154421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 15129281774995672, guid: 73d3b88a91672374a8a68a06d8a167b7, type: 3}
+  foodValue: 100
 --- !u!114 &816005579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,6 +921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 35172685255263422, guid: b9f081bcb819d1748870f4b1ec80fe89, type: 3}
+  foodValue: 1000000
 --- !u!114 &940523901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1194,6 +1201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1118080987}
   foodItem: {fileID: 5689084723004273874, guid: 9d8690d9f2279f94f8644d307ce4f4e5, type: 3}
+  foodValue: 1
 --- !u!114 &1239973861
 MonoBehaviour:
   m_ObjectHideFlags: 0

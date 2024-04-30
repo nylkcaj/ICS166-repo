@@ -8,12 +8,13 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 {
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject foodItem;
-
+    [SerializeField] public int foodValue; // added to track specific order
 
     private RectTransform rectTransform;
     private Transform itemTransform;
     private GameObject currentItem;
     private Collider2D foodCollider;
+    
 
     private void Awake()
     {
@@ -39,7 +40,9 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         Debug.Log("OnEndDrag");
 
         foodCollider.enabled = true;
+        GameFlow.plateValue += foodValue; 
 
+        Debug.Log(GameFlow.plateValue + " " + GameFlow.orderValue);
         Debug.Log("Collider.enabled = " + foodCollider.enabled);
     }
 
@@ -58,6 +61,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         foodCollider = currentItem.GetComponent<Collider2D>();
 
         foodCollider.enabled = false;
+        
 
         Debug.Log("Collider.enabled = " + foodCollider.enabled);
     }

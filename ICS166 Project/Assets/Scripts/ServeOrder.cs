@@ -27,6 +27,16 @@ public class ServeOrder : MonoBehaviour
     {
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         dragging = true;
+
+        // checking if plates match the customer order
+        if (GameFlow.orderValue == GameFlow.plateValue)
+        {
+            Debug.Log("correct order");
+        }
+        else
+        {
+            Debug.Log("incorrect order");
+        }
     }
 
     private void OnMouseUp()
