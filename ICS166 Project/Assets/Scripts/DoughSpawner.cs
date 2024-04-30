@@ -21,5 +21,6 @@ public class DoughSpawner : MonoBehaviour
     {
         Instantiate(newDough);
         GameFlow.plateValue = 0;
+        
     }
 }
