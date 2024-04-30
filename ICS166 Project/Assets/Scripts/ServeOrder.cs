@@ -52,6 +52,8 @@ public class ServeOrder : MonoBehaviour
         {
             DoughSpawner.isServed.Invoke();
             Destroy(gameObject);
+            // Remove after
+            Destroy(collision.gameObject);  
 
         }
         else
