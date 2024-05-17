@@ -40,7 +40,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         Debug.Log("OnEndDrag");
 
         foodCollider.enabled = true;
-        GameFlow.plateValue += foodValue; 
+        //GameFlow.plateValue += foodValue; 
 
         Debug.Log(GameFlow.plateValue + " " + GameFlow.orderValue);
         Debug.Log("Collider.enabled = " + foodCollider.enabled);

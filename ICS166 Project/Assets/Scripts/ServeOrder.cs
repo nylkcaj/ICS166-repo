@@ -32,7 +32,7 @@ public class ServeOrder : MonoBehaviour
         if (GameFlow.orderValue == GameFlow.plateValue)
         {
             Debug.Log("correct order");
-            GameFlow.plateValue = 0;
+            //GameFlow.plateValue = 0;
         }
         else
         {
